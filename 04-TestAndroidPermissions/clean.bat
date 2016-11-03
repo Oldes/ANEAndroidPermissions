@@ -1,0 +1,1 @@
+@IF EXIST .\Build\TestAndroidPermissions.apk DEL /F /Q .\Build\TestAndroidPermissions.apk

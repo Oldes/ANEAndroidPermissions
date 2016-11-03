@@ -1,0 +1,22 @@
+<extension xmlns="http://ns.adobe.com/air/extension/23.0">
+
+<!-- ADOBE SYSTEMS INCORPORATED                                                                       -->
+<!--  Copyright 2011 Adobe Systems Incorporated                                                       -->
+<!--  All Rights Reserved.                                                                            -->
+<!--                                                                                                  -->
+<!-- NOTICE: Adobe permits you to use, modify, and distribute this file in accordance with the        -->
+<!-- terms of the Adobe license agreement accompanying it.  If you have received this file from a     -->
+<!-- source other than Adobe, then your use, modification, or distribution of it requires the prior   -->
+<!-- written permission of Adobe.                                                                     -->
+
+    <id>com.amanitadesign.AndroidPermissions</id>
+    <versionNumber>1</versionNumber>
+    <platforms>
+      <platform name="Android-ARM">
+        <applicationDeployment>
+          <nativeLibrary>AndroidPermissions.jar</nativeLibrary>
+          <initializer>com.amanitadesign.ane.PermissionsExtension</initializer>
+        </applicationDeployment>
+      </platform>
+    </platforms>
+</extension>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<application xmlns="http://ns.adobe.com/air/application/23.0">
+	
+	<id>com.amanitadesign.TestAndroidPermissions</id>
+	<versionNumber>0.1</versionNumber>
+	<supportedProfiles>mobileDevice</supportedProfiles>
+	<filename>TestAndroidPermissions</filename>
+	
+	<name>TestAndroidPermissions</name>
+	<description></description>
+	<copyright></copyright>
+	
+	<android>
+		<manifestAdditions><![CDATA[
+			
+			<manifest android:installLocation="auto">
+			  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="24"/>
+				<uses-permission android:name="android.permission.INTERNET"/>
+				
+				<!-- Required to read and write the expansion files on shared storage -->
+            	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+            	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+				<uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch"/>
+				<application android:enabled="true" android:debuggable="true">
+			
+	              <activity android:excludeFromRecents="false" >
+	                <intent-filter>
+	                  <action android:name="android.intent.action.MAIN"/>
+	                  <category android:name="android.intent.category.LAUNCHER"/>
+	                </intent-filter>
+	              </activity>
+					<activity android:name="com.amanitadesign.ane.PermissionsRequestActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+				</application>
+			</manifest>
+			
+		]]></manifestAdditions>
+	</android>
+    
+	
+	<initialWindow>
+		<title>TestAndroidPermissions</title>
+		<content>TestAndroidPermissions.swf</content>
+		<visible>true</visible>
+		<fullScreen>true</fullScreen>
+		<!--<autoOrients>false</autoOrients>-->
+		<!--<aspectRatio>landscape</aspectRatio>-->
+		<renderMode>direct</renderMode>
+		<!--<depthAndStencil>true</depthAndStencil>--> <!-- required for 3D -->
+	</initialWindow>
+	
+	<icon>
+		<image48x48>icons/icon_48.png</image48x48>
+		<image57x57>icons/icon_57.png</image57x57>
+		<image72x72>icons/icon_72.png</image72x72>
+		<image76x76>icons/icon_76.png</image76x76>
+		<image96x96>icons/icon_96.png</image96x96>
+		<image114x114>icons/icon_114.png</image114x114>
+		<image120x120>icons/icon_120.png</image120x120>
+		<image144x144>icons/icon_144.png</image144x144>
+		<image152x152>icons/icon_152.png</image152x152>
+		<!--<image512x512>icons/icon_512.png</image512x512>-->
+	</icon>
+	
+
+  <extensions>
+   <extensionID>com.amanitadesign.AndroidPermissions</extensionID>
+  </extensions>
+</application>

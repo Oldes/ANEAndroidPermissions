@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+
+<componentPackage>
+	<component id="AndroidPermissions" class="com.amanitadesign.AndroidPermissions"/>
+</componentPackage>

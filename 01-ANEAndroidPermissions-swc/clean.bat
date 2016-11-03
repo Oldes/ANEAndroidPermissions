@@ -1,0 +1,1 @@
+@IF EXIST com.amanitadesign.AndroidPermissions.swc DEL com.amanitadesign.AndroidPermissions.swc
