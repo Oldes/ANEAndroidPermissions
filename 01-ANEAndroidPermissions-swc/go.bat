@@ -1,5 +1,5 @@
 :: Path to Flex SDK
-@set FLEX_SDK=C:\SDKs\AIR23
+@set FLEX_SDK=C:\SDKs\AIR24
 
 
 :validation
@@ -22,6 +22,7 @@
 
 @echo.
 "%FLEX_SDK%"/bin/acompc -namespace http://amanita-design.net/extensions src/manifest.xml ^
+    -swf-version 33     ^
     -source-path src	^
     -include-classes	^
     com.amanitadesign.AndroidPermissions	^
