@@ -49,6 +49,7 @@ package
 		}
 		
 		private function requestForPermissions():void {
+			//return;
 			/** NOTE: you must have the rights in the request specified in application manifest as it was required for SDK < 23, else it would not work! **/
 			log("Requesting for permissions: "
 				+ AndroidPermissions.instance.requestPermissions(

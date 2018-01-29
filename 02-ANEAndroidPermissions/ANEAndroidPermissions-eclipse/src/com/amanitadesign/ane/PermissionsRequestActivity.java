@@ -13,15 +13,19 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 
-@TargetApi(23)
+@TargetApi(25)
 final public class PermissionsRequestActivity extends Activity {  
   
 	
 	@Override  
 	final protected void onCreate(Bundle savedInstanceState) {  
-		super.onCreate(savedInstanceState);  
+		super.onCreate(savedInstanceState);
+		
+		if(PermissionsExtension.VERBOSE > 1) Log.d(PermissionsExtension.TAG, "setContentView... ");
 
-		setContentView(R.layout.request_permissions);
+		setContentView(R.layout.request_permissions); //<--- Test APP Crashes HERE
+		
+		if(PermissionsExtension.VERBOSE > 1) Log.d(PermissionsExtension.TAG, "permissions: "+getIntent().getExtras().getStringArray("permissions"));
 		
 		this.requestPermissions(getIntent().getExtras().getStringArray("permissions"), android.os.Process.myUid());
 	}

@@ -1,5 +1,5 @@
 :: Path to Flex SDK
-@set FLEX_SDK=C:\SDKs\AIR23
+@set FLEX_SDK=C:\SDKs\AIR28
 @set PASS=none
 
 :validation
@@ -24,6 +24,7 @@ mkdir src\assets
 copy "..\01-ANEAndroidPermissions-swc\com.amanitadesign.AndroidPermissions.swc" src\assets
 
 xcopy /S /Y res\* src\assets\platform\Android-ARM\
+xcopy /S /Y res\* src\assets\platform\Android-x86\
 
 mkdir src\assets\swc-contents
 pushd src\assets\swc-contents
@@ -32,15 +33,20 @@ popd
 
 mkdir src\assets\platform
 mkdir src\assets\platform\Android-ARM
+mkdir src\assets\platform\Android-x86
 
 copy "..\02-ANEAndroidPermissions\AndroidPermissions.jar" src\assets\platform\Android-ARM
 copy src\assets\swc-contents\library.swf src\assets\platform\Android-ARM
 
-@java -jar "%FLEX_SDK%\lib\adt.jar" -package        ^
-    -target ane ANEAndroidPermissions.ane src\extension.xml	^
-    -swc src\assets\com.amanitadesign.AndroidPermissions.swc	^
-    -platform Android-ARM                               ^
-    -C src\assets\platform\Android-ARM .
+copy "..\02-ANEAndroidPermissions\AndroidPermissions.jar" src\assets\platform\Android-x86
+copy src\assets\swc-contents\library.swf src\assets\platform\Android-x86
+
+java -jar "%FLEX_SDK%\lib\adt.jar" -package                   ^
+	-target ane ANEAndroidPermissions.ane src\extension.xml    ^
+	-swc src\assets\com.amanitadesign.AndroidPermissions.swc   ^
+	-platform Android-ARM -C src\assets\platform\Android-ARM . ^
+	-platform Android-x86 -C src\assets\platform\Android-x86 . 
+
 
 RD  /S /Q .\src\assets
 

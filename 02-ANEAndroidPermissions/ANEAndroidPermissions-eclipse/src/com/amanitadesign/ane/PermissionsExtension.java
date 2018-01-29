@@ -12,7 +12,7 @@ import com.adobe.fre.FREExtension;
  */
 public class PermissionsExtension implements FREExtension {
     public static final String TAG = "AmanitaNativeExtension";
-    public static final int VERBOSE = 0; 
+    public static final int VERBOSE = 2; 
 
     public static PermissionsExtensionContext extensionContext;
     public static Context appContext;

@@ -17,7 +17,7 @@ import com.adobe.fre.FREFunction;
 import com.adobe.fre.FREObject;
 import com.adobe.fre.FREArray;
 
-@TargetApi(23)
+@TargetApi(25)
 public class PermissionsFunctions {
 	
 	static public class Init implements FREFunction {

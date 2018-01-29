@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?> 
-<application xmlns="http://ns.adobe.com/air/application/23.0">
+<application xmlns="http://ns.adobe.com/air/application/28.0">
 	
 	<id>com.amanitadesign.TestAndroidPermissions</id>
 	<versionNumber>0.1</versionNumber>
@@ -14,30 +14,29 @@
 		<manifestAdditions><![CDATA[
 			
 			<manifest android:installLocation="auto">
-			  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="24"/>
+			  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="25"/>
 				<uses-permission android:name="android.permission.INTERNET"/>
 				
 				<!-- Required to read and write the expansion files on shared storage -->
-            	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+				<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-            	<uses-permission android:name="android.permission.RECEIVE_SMS" />
+				<uses-permission android:name="android.permission.RECEIVE_SMS" />
 
 				<uses-feature android:required="true" android:name="android.hardware.touchscreen.multitouch"/>
 				<application android:enabled="true" android:debuggable="true">
-			
-	              <activity android:excludeFromRecents="false" >
-	                <intent-filter>
-	                  <action android:name="android.intent.action.MAIN"/>
-	                  <category android:name="android.intent.category.LAUNCHER"/>
-	                </intent-filter>
-	              </activity>
-					<activity android:name="com.amanitadesign.ane.PermissionsRequestActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+					<activity android:excludeFromRecents="false" >
+						<intent-filter>
+						  <action android:name="android.intent.action.MAIN"/>
+						  <category android:name="android.intent.category.LAUNCHER"/>
+						</intent-filter>
+				  	</activity>
+					<activity android:name="com.amanitadesign.ane.PermissionsRequestActivity"/>
 				</application>
 			</manifest>
 			
 		]]></manifestAdditions>
 	</android>
-    
+	
 	
 	<initialWindow>
 		<title>TestAndroidPermissions</title>
@@ -60,6 +59,7 @@
 		<image120x120>icons/icon_120.png</image120x120>
 		<image144x144>icons/icon_144.png</image144x144>
 		<image152x152>icons/icon_152.png</image152x152>
+		<image192x192>icons/icon_192.png</image192x192>
 		<!--<image512x512>icons/icon_512.png</image512x512>-->
 	</icon>
 	

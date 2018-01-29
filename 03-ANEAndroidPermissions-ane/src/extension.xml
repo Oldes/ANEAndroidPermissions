@@ -1,4 +1,4 @@
-<extension xmlns="http://ns.adobe.com/air/extension/22.0">
+<extension xmlns="http://ns.adobe.com/air/extension/28.0">
 
 <!-- ADOBE SYSTEMS INCORPORATED                                                                       -->
 <!--  Copyright 2011 Adobe Systems Incorporated                                                       -->
@@ -13,6 +13,12 @@
     <versionNumber>1</versionNumber>
     <platforms>
       <platform name="Android-ARM">
+        <applicationDeployment>
+          <nativeLibrary>AndroidPermissions.jar</nativeLibrary>
+          <initializer>com.amanitadesign.ane.PermissionsExtension</initializer>
+        </applicationDeployment>
+      </platform>
+      <platform name="Android-x86">
         <applicationDeployment>
           <nativeLibrary>AndroidPermissions.jar</nativeLibrary>
           <initializer>com.amanitadesign.ane.PermissionsExtension</initializer>

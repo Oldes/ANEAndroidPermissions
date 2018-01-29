@@ -1,5 +1,5 @@
 :: Path to Flex SDK
-@set FLEX_SDK=C:\SDKs\AIR24
+@set FLEX_SDK=C:\SDKs\AIR28
 
 
 :validation
