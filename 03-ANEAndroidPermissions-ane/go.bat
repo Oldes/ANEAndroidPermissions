@@ -1,22 +1,5 @@
-:: Path to Flex SDK
-@set FLEX_SDK=C:\SDKs\AIR28
-@set PASS=none
-
-:validation
-@if not exist "%FLEX_SDK%\bin" goto flexsdk
-@goto succeed
-
-
-:flexsdk
-@echo.
-@echo ERROR: incorrect path to Flex SDK
-@echo.
-@echo Looking for: %FLEX_SDK%\bin
-@echo.
-@if %PAUSE_ERRORS%==1 pause
-@exit
-
-:succeed
+:: Path to AIR SDK
+@call ../setup.bat
 
 call clean.bat
 
@@ -41,12 +24,11 @@ copy src\assets\swc-contents\library.swf src\assets\platform\Android-ARM
 copy "..\02-ANEAndroidPermissions\AndroidPermissions.jar" src\assets\platform\Android-x86
 copy src\assets\swc-contents\library.swf src\assets\platform\Android-x86
 
-java -jar "%FLEX_SDK%\lib\adt.jar" -package                   ^
+java -jar "%AIR_SDK%\lib\adt.jar" -package                     ^
 	-target ane ANEAndroidPermissions.ane src\extension.xml    ^
 	-swc src\assets\com.amanitadesign.AndroidPermissions.swc   ^
 	-platform Android-ARM -C src\assets\platform\Android-ARM . ^
 	-platform Android-x86 -C src\assets\platform\Android-x86 . 
-
 
 RD  /S /Q .\src\assets
 

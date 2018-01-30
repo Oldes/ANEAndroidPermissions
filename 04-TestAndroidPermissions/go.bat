@@ -1,5 +1,6 @@
 @set PAUSE_ERRORS=1
-@set AIR_SDK=C:\SDKs\AIR28
+
+@call ../setup.bat
 
 @echo Building SWF file
 
@@ -27,7 +28,7 @@ echo Packing new build...
 set AIR_NOANDROIDFLAIR=true
 
 @echo on
-java -jar %AIR_SDK%\lib\adt.jar -package -target apk-debug ^
+java -jar %AIR_SDK%\lib\adt.jar -package -target apk-debug -arch %ARCH_OPTION% ^
 	-storetype pkcs12 -keystore TestAndroidPermissions.p12 -storepass fd ^
 	%BUILD_NAME%  application.xml TestAndroidPermissions.swf icons/* ^
 	-extdir ../03-ANEAndroidPermissions-ane/

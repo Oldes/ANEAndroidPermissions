@@ -1,10 +1,6 @@
 @echo off
 set PAUSE_ERRORS=1
 
-SET FLEX_SDK=c:\SDKs\AIR23
-set PATH=%PATH%;%FLEX_SDK%\bin
-
-
 echo "===== Step 01 =========================================================="
 cd 01*
 call ./go.bat
