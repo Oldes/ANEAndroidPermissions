@@ -18,5 +18,11 @@
           <initializer>com.amanitadesign.ane.PermissionsExtension</initializer>
         </applicationDeployment>
       </platform>
+      <platform name="Android-x86">
+        <applicationDeployment>
+          <nativeLibrary>AndroidPermissions.jar</nativeLibrary>
+          <initializer>com.amanitadesign.ane.PermissionsExtension</initializer>
+        </applicationDeployment>
+      </platform>
     </platforms>
 </extension>

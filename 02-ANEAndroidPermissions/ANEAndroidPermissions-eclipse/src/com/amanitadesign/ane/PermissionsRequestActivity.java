@@ -20,9 +20,6 @@ final public class PermissionsRequestActivity extends Activity {
 	@Override  
 	final protected void onCreate(Bundle savedInstanceState) {  
 		super.onCreate(savedInstanceState);  
-
-		setContentView(R.layout.request_permissions);
-		
 		this.requestPermissions(getIntent().getExtras().getStringArray("permissions"), android.os.Process.myUid());
 	}
 
