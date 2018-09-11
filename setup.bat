@@ -1,7 +1,7 @@
 
 @IF DEFINED AIR_SDK @goto validation
 	
-SET AIR_SDK=c:\SDKs\AIR28
+SET AIR_SDK=c:\SDKs\AIR30
 SET PASS=none
 
 SET ARCH_OPTION=armv7

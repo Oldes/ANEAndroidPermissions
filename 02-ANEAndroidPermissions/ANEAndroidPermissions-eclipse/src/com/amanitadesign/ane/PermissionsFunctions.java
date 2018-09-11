@@ -70,6 +70,7 @@ public class PermissionsFunctions {
 					final Intent intent = new Intent(act, PermissionsRequestActivity.class);
 					intent.putExtra("permissions", permissions);
 					act.startActivity(intent);
+					
 					act.overridePendingTransition(0,0);
 					
 					return FREObject.newObject(true); //true means that we should wait for callback on AS3 side

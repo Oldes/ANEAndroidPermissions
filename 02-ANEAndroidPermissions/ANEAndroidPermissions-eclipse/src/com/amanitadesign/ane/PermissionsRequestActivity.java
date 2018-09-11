@@ -38,7 +38,11 @@ final public class PermissionsRequestActivity extends Activity {
 		if(PermissionsExtension.VERBOSE > 1) Log.d(PermissionsExtension.TAG, "onRequestPermissionsResult: "+ results+";");
 
 		finish();  
-		this.overridePendingTransition(0,0);  
-		PermissionsExtension.extensionContext.dispatchStatusEventAsync("onRequestPermissionsResult", results);
+		this.overridePendingTransition(0,0);
+		try {
+			PermissionsExtension.extensionContext.dispatchStatusEventAsync("onRequestPermissionsResult", results);
+		} catch (Exception e) {
+			Log.e(PermissionsExtension.TAG, "onRequestPermissionsResult dispatch failed!");
+		}
 	}
 }  
