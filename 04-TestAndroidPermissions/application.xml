@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?> 
-<application xmlns="http://ns.adobe.com/air/application/28.0">
+<application xmlns="http://ns.adobe.com/air/application/32.0">
 	
 	<id>com.amanitadesign.TestAndroidPermissions</id>
 	<versionNumber>0.1</versionNumber>
@@ -14,11 +14,12 @@
 		<manifestAdditions><![CDATA[
 			
 			<manifest android:installLocation="auto">
-			  <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="25"/>
+			  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="27"/>
 				<uses-permission android:name="android.permission.INTERNET"/>
 				
 				<!-- Required to read and write the expansion files on shared storage -->
-            	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+            	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="18"/>
+		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="18"/>
 
             	<uses-permission android:name="android.permission.RECEIVE_SMS" />
 
