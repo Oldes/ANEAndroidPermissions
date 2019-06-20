@@ -1,7 +1,7 @@
 
 @IF DEFINED AIR_SDK @goto validation
 	
-SET AIR_SDK=x:\GIT\AIR-Win-SDK
+SET AIR_SDK=..\..\AIRSDK-Windows
 SET PASS=none
 
 SET ARCH_OPTION=armv7
